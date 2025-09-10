@@ -46,7 +46,7 @@ function Home({ setSelectedCountry }) {
             ></div>
 
             {/* النص */}
-            <div className="absolute top-1/4 md:top-1/3 left-1/2 md:left-1/4 -translate-x-1/2 md:translate-x-0 text-center md:text-left text-white max-w-sm md:max-w-md px-4">
+            <div className="absolute top-[100px]  left-1/2 md:left-1/4 -translate-x-1/2 md:translate-x-0 text-center md:text-left text-white max-w-sm md:max-w-md px-4">
                 <h1 className="text-3xl md:text-7xl font-bold">Seven Wonders</h1>
                 <h2 className="text-lg md:text-4xl mt-2">of the Ancient World</h2>
                 <p className="mt-4 text-sm md:text-lg italic text-gray-200">
@@ -57,18 +57,17 @@ function Home({ setSelectedCountry }) {
             {/* أزرار التنقل */}
             <button
                 onClick={prevSlide}
-                className="absolute top-1/2 left-3 md:left-5 -translate-y-1/2 text-white text-2xl md:text-4xl p-2 bg-black/40 rounded-full hover:bg-black/70 transition"
+                className="absolute top-[250px] left-1   text-white text-2xl md:text-4xl  bg-black/40 rounded-full hover:bg-black/70 transition"
             >
                 <HiChevronLeft />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute top-1/2 right-3 md:right-5 -translate-y-1/2 text-white text-2xl md:text-4xl p-2 bg-black/40 rounded-full hover:bg-black/70 transition"
+                className="absolute top-[250px] right-3   text-white text-2xl md:text-4xl  bg-black/40 rounded-full hover:bg-black/70 transition"
             >
                 <HiChevronRight />
             </button>
 
-            {/* الجزء اللي تحت */}
             <div className="relative w-full h-auto md:h-[300px] bg-blue-900 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-4 md:px-6 py-8 md:py-0">
                 <div className="relative -top-10 md:-top-32 w-full max-w-[320px] md:max-w-[500px]">
                     <iframe
