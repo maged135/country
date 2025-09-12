@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import url1 from "../image/slide1.jpg";
+import url2 from "../image/slide2.jpg";
+import url3 from "../image/slide3.jpg";
+import world from "../image/world.jpg";
+import playicon from "../image/playicon.png";
 
 function Home({ setSelectedCountry }) {
     const slides = [
-        { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
-        { url: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" },
-        { url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb" },
+        { url: `${url1}`, caption: "Hanging Gardens of Babylon" },
+        { url: `${url2}`, caption: "Temple of Artemis" },
+        { url: `${url3}`, caption: "Great Pyramids of Giza" },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,9 +46,10 @@ function Home({ setSelectedCountry }) {
         <div className="w-full relative">
             {/* السلايدر */}
             <div
-                className="w-full h-[60vh] md:h-screen bg-cover bg-center duration-500"
+                className="w-full h-[80vh] bg-cover bg-center duration-500"
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
             ></div>
+
 
             {/* النص */}
             <div className="absolute top-[100px]  left-1/2 md:left-1/4 -translate-x-1/2 md:translate-x-0 text-center md:text-left text-white max-w-sm md:max-w-md px-4">
@@ -69,15 +75,20 @@ function Home({ setSelectedCountry }) {
             </button>
 
             <div className="relative w-full h-auto md:h-[300px] bg-blue-900 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-4 md:px-6 py-8 md:py-0">
-                <div className="relative -top-10 md:-top-32 w-full max-w-[320px] md:max-w-[500px]">
-                    <iframe
+                <div className="relative -top-10 md:-top-16 w-full max-w-[320px] md:max-w-[350px]">
+                    {/* صورة الخلفية */}
+                    <img
                         className="w-full h-[180px] md:h-[250px] filter brightness-90 rounded-lg"
-                        src="https://www.youtube.com/embed/W1_36hDY5zc"
-                        title="3D World Map Animation"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
+                        src={world}
+                        alt="World"
+                    />
+                    <img
+                        src={playicon}
+                        alt="Play Icon"
+                        className="absolute bottom-2 right-2 w-10 h-10 cursor-pointer hover:scale-110 transition"
+                    />
                 </div>
+
                 <div className="text-white text-center md:text-left">
                     <h1 className="text-xl md:text-4xl font-bold">Welcome to World Countries</h1>
                     <p className="text-sm md:text-lg leading-relaxed mt-2">

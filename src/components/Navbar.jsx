@@ -1,5 +1,5 @@
 import { HiX, HiHome } from "react-icons/hi";
-
+import image1 from '../image/h3logo.png'
 function Navbar() {
     return (
         <nav className="md:h-[130px] bg-slate-200 flex flex-col">
@@ -25,15 +25,7 @@ function Navbar() {
             {/* الجزء السفلي */}
             <div className="flex items-center justify-center h-[80px] md:h-[100px] gap-2">
                 <div className="flex items-center gap-2">
-                    <HiHome className="text-red-950 text-xl sm:text-2xl md:text-5xl" />
-                    <div className="flex-col flex leading-tight text-center md:text-left">
-                        <h1 className="text-lg sm:text-xl md:text-3xl font-bold text-red-950">
-                            BALAD
-                        </h1>
-                        <h1 className="text-xs sm:text-sm md:text-base">
-                            city template
-                        </h1>
-                    </div>
+                    <img src= {image1} />
                 </div>
             </div>
         </nav>

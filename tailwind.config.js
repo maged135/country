@@ -8,7 +8,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'custom-bg': "url('https://th.bing.com/th/id/R.d0f5a0fb0ee7713c2af4bc77c239d01c?rik=7ZMPxt8tmyVGPg&pid=ImgRaw&r=0')",
+        'time-bg': "url('/src/image/factsbg2.jpg')",
+        
+        
       },
     },
   },
