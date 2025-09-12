@@ -10,10 +10,10 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "magedqwe123",   // من EmailJS
-        "template_7xw6mir",  // من EmailJS
+        "magedqwe123",   
+        "template_7xw6mir",  
         e.target,
-        "Z-dIlb_0d1WaEXk5v"    // من EmailJS
+        "Z-dIlb_0d1WaEXk5v"    
       )
       .then(
         () => {
